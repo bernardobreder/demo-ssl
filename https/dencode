@@ -1,0 +1,2 @@
+java -cp bin JcaKeyPair 512 keypair RSA
+java -cp bin JcePublicCipher RSA decrypt keypair.pri a-encoded.txt a-copy.txt

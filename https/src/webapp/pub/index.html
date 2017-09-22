@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Starter Template for Bootstrap</title>
+<link href="css/normalize.css" rel="stylesheet" />
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/bootstrap-theme.css" rel="stylesheet" />
+<link href="css/chosen/chosen.css" rel="stylesheet" />
+<script src="js/jquery-2.0.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/chosen/chosen.jquery.js"></script>
+<script src="js/chosen/chosen.proto.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">Cenário <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" data-toggle="tooltip"
+								title="Carregue os dados de um período" data-placement="right">Carregar
+									Dados...</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Carrega os dados de programação de navios"
+								data-placement="right">Carregar Programações...</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Carregue os dados do PIMEX" data-placement="right">Carregar
+									Previsões PIMEX...</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Atende os mercados" data-placement="right">Atender
+									Mercados...</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Atualize o cenário com os dados já salvos"
+								data-placement="right">Atualizar</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Salve o cenário" data-placement="right">Salvar</a></li>
+							<li class="divider"></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Revise o Planejamento de Produção" data-placement="right">Revisar
+									Planejamento de Produção...</a></li>
+							<li class="divider"></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Visualize o históricos de todas as mudanças"
+								data-placement="right">Ver Histórico</a></li>
+							<li class="divider"></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Verifique os dados a serem modificados"
+								data-placement="right">Verificar</a></li>
+							<li class="divider"></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Imprima o dados do Cenário" data-placement="right">Imprimir...</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Exporte os dados do Cenário" data-placement="right">Exportar...</a></li>
+							<li><a href="#" data-toggle="tooltip"
+								title="Exporte os dados de Plano de Movimentação"
+								data-placement="right">Exportar Plano de Movimentações...</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">Visualização <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">✔ Previsão Diária de Processamento</a></li>
+							<li><a href="#">✔ Anotações</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Interface Gráfica</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				Cenário 1 <small>Janeiro 2008 a Março 2008</small>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<select class="form-control" data-toggle="tooltip"
+					title="Selecione a Visão que deseja visualizar">
+					<option>2 Grupamentos</option>
+					<option>1 Ponto e Produto</option>
+					<option>Nafta Refino</option>
+				</select>
+				<div class="visible-sm visible-xs">&nbsp;</div>
+			</div>
+			<div class="col-md-3">
+				<select class="form-control" data-toggle="tooltip"
+					title="Selecione o Eixo da tabela">
+					<option>Operações x Produtos</option>
+					<option>Operações x Locais</option>
+					<option>Locais x Operações</option>
+					<option>Locais x Produtos</option>
+					<option>Produtos x Operações</option>
+					<option>Produtos x Locais</option>
+				</select>
+				<div class="visible-sm visible-xs">&nbsp;</div>
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" data-toggle="tooltip"
+					title="Selecione o Ponto ou Região">
+					<option>BRASIL</option>
+					<option>&nbsp;&nbsp; Aracaju</option>
+					<option>&nbsp;&nbsp; Manaus</option>
+					<option>&nbsp;&nbsp; Reduc</option>
+					<option>&nbsp;&nbsp; Replan</option>
+					<option>&nbsp;&nbsp; Fortaleza</option>
+					<option>&nbsp;&nbsp; Navio A</option>
+					<option>&nbsp;&nbsp; Navio B</option>
+					<option>&nbsp;&nbsp; E&P</option>
+					<option>FERT</option>
+					<option>&nbsp;&nbsp; FERT BA</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp; Aracaju</option>
+					<option>&nbsp;&nbsp; FERT SE</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp; Replan</option>
+					<option>&nbsp;&nbsp;&nbsp;&nbsp; Reduc</option>
+					<option>NAVIO</option>
+					<option>&nbsp;&nbsp; Navia A</option>
+					<option>NAVIO_POR_OPERAÇÃO</option>
+					<option>&nbsp;&nbsp; Navia B</option>
+				</select>
+				<div class="visible-sm visible-xs">&nbsp;</div>
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" data-toggle="tooltip"
+					title="Selecione o Modo de Acompanhamento">
+					<option>Previsto</option>
+					<option>Realizado</option>
+					<option>A Realizar</option>
+					<option>P. Linearizado</option>
+					<option>Desvio</option>
+				</select>
+				<div class="visible-sm visible-xs">&nbsp;</div>
+			</div>
+			<div class="col-md-1">
+				<select class="form-control" data-toggle="tooltip"
+					title="Selecione o Dia">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+					<option>25</option>
+					<option>26</option>
+					<option>27</option>
+					<option>28</option>
+					<option>29</option>
+					<option>30</option>
+					<option>31</option>
+				</select>
+				<div class="visible-sm visible-xs">&nbsp;</div>
+			</div>
+			<div class="col-md-2">
+				<select class="form-control" data-toggle="tooltip"
+					title="Selecione o Mês">
+					<option>Janeiro 2008</option>
+					<option>Fevereiro 2008</option>
+					<option>Março 2008</option>
+				</select>
+				<div class="visible-sm visible-xs">&nbsp;</div>
+			</div>
+		</div>
+		<hr />
+		<div class="panel panel-info"">
+			<div class="panel-heading">
+				<h3 class="panel-title">Janeiro de 2008</h3>
+			</div>
+			<div class="panel-body">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-3" data-toggle="tooltip"
+								title="Constante de Processamento FCC">
+								<small>FCC : </small> <strong>65,9</strong> <small>mil
+									m3/dia</small>
+							</div>
+							<div class="col-sm-3" data-toggle="tooltip"
+								title="Constante de Processamento DEST">
+								<small>DEST : </small> <strong>231,5</strong> <small>mil
+									m3/dia</small>
+							</div>
+							<div class="col-sm-3" data-toggle="tooltip"
+								title="Constante de Processamento HDT">
+								<small>HDT : </small> <strong>28,9</strong> <small>mil
+									m3/dia</small>
+							</div>
+							<div class="col-sm-3" data-toggle="tooltip"
+								title="Constante de Processamento COQ">
+								<small>COQ : </small> <strong>13,4</strong> <small>mil
+									m3/dia</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-condensed table-bordered">
+						<tr>
+							<th class="success text-center">Janeiro<br />2008
+							</th>
+							<th class="active text-center"><strong>NAFTA</strong><br />
+								<small>mil t</small></th>
+							<th class="active text-center"><strong>BUTANO</strong><br />
+								<small>mil t</small></th>
+							<th class="active text-center"><strong>PROPANO</strong><br />
+								<small>mil m3</small></th>
+							<th class="active text-center"><strong>ACABADO
+									NORMAL</strong><br /> <small>mil t</small></th>
+							<th class="active text-center"><strong>ACABADO
+									ESPECIAL</strong><br /> <small>mil t</small></th>
+							<th class="active text-center"><strong>GLP</strong><br /> <small>mil
+									t</small></th>
+							<th class="active text-center"><strong>QUEROSENE</strong><br />
+								<small>mil m3</small></th>
+							<th class="active text-center"><strong>DIESEL</strong><br />
+								<small>mil t</small></th>
+							<th class="active text-center"><strong>OQ</strong><br /> <small>mil
+									t</small></th>
+							<th class="active text-center"><strong>GLP ENERG</strong><br />
+								<small>mil t</small></th>
+							<th class="active text-center"><strong>NAFTA</strong><br />
+								<small>mil t</small></th>
+							<th class="active text-center"><strong>BUTANO</strong><br />
+								<small>mil m3</small></th>
+							<th class="active text-center"><strong>PROPANO</strong><br />
+								<small>mil t</small></th>
+							<th class="active text-center"><strong>ACABADO
+									NORMAL</strong><br /> <small>mil t</small></th>
+							<th class="active text-center"><strong>ACABADO
+									ESPECIAL</strong><br /> <small>mil t</small></th>
+							<th class="active text-center"><strong>GLP</strong><br /> <small>mil
+									t</small></th>
+							<th class="active text-center"><strong>QUEROSENE</strong><br />
+								<small>mil m3</small></th>
+							<th class="active text-center"><strong>DIESEL</strong><br />
+								<small>mil m3</small></th>
+							<th class="active text-center"><strong>OQ</strong><br /> <small>mil
+									t</small></th>
+						</tr>
+						<tr>
+							<th class="active">Estoque de Abertura</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Entrega para Terceiros</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Fornecimento Interno</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Processamento</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Produção</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Movimentação</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Exportação</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Importação</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Fechamento</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+						<tr>
+							<th class="active">Estoque Meta</th>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+							<td>a</td>
+						</tr>
+					</table>
+				</div>
+				<textarea class="form-control" rows="3" style="resize: none"
+					data-toggle="tooltip"
+					title="Anotações referente ao mês de Janeiro de 2008"></textarea>
+			</div>
+		</div>
+		<hr />
+		<div class="row text-right hidden-print">
+			<div class="col-xs-12">
+				<a class="btn btn-default" href="#" role="button">Imprimir</a> <a
+					class="btn btn-default" href="#" role="button">Exportar</a>
+			</div>
+		</div>
+		<div>&nbsp;</div>
+	</div>
+	<script>
+		$(function() {
+			$('body').tooltip({
+				selector : "[data-toggle=tooltip]",
+				container : "body"
+			});
+		});
+	</script>
+</body>
+</html>
+<!-- http://gregfranko.com/jquery.selectBoxIt.js/ -->

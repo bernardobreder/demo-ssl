@@ -1,0 +1,48 @@
+<project name="Https" default="dist" basedir=".">
+	<property name="src" location="src" />
+	<property name="lib" location="lib" />
+	<property name="build" location="bin" />
+	<property name="dist" location="dist" />
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<path id="compile.path">
+			<fileset dir="${lib}">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+		<javac srcdir="${src}" destdir="${build}" debug="true" deprecation="true" includeantruntime="false">
+			<classpath refid="compile.path" />
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<mkdir dir="${dist}" />
+		<jar jarfile="${dist}/https.jar" basedir="${build}">
+			<manifest>
+				<attribute name="Main-Class" value="demo.Main" />
+			</manifest>
+			<!--<zipfileset excludes="META-INF/*.SF" src="${lib}/breder_editor.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="${lib}/dom4j-2.0.0-ALPHA-2.jar" />-->
+			<fileset dir="${src}" includes="**/*.html" />
+			<fileset dir="${src}" includes="**/*.css" />
+			<fileset dir="${src}" includes="**/*.js" />
+			<fileset dir="${src}" includes="**/*eot" />
+				<fileset dir="${src}" includes="**/*.svg" />
+			<fileset dir="${src}" includes="**/*.ttf" />
+			<fileset dir="${src}" includes="**/*.woff" />
+			<fileset dir="${src}" includes="**/*.png" />
+			<fileset dir="${src}" includes="**/*.jpg" />
+			<fileset dir="${src}" includes="**/*.gif" />
+			<fileset dir="${src}" includes="**/*.pem" />
+		</jar>
+	</target>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+	</target>
+</project>

@@ -1,0 +1,2 @@
+java -cp bin JcaKeyPair 512 keypair RSA
+java -cp bin JcePublicCipher RSA encrypt keypair.pub a.txt a-encoded.txt

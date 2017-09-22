@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="BigInt.js">
+</script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha512.js"></script>
+</head>
+<body>
+	<script>
+var A = randBigInt(2048);
+var B = randBigInt(2048);
+var X1 = str2bigInt("4",10); // Chave privada de Ana
+var Y1 = str2bigInt("5",10); // Chave privada de Beto
+var X2 = powMod(A,X1,B); // Chave publica de Ana
+var Y2 = powMod(A,Y1,B); // Chave publica de Beto
+var Z1 = powMod(Y2,X1,B); // Chave Simétrica de Ana
+var Z2 = powMod(X2,Y1,B); // Chave Simétrica de Beto
+var Z = bigInt2str(Z1,10);
+
+console.info(bigInt2str(Z1,10));
+console.info(bigInt2str(Z2,10));
+console.info(equals(Z1,Z2));
+
+var message = "Hello!";
+var encrypted = CryptoJS.AES.encrypt(message, Z);
+var decrypted = CryptoJS.AES.decrypt(encrypted, Z);
+console.info(decrypted.toString(CryptoJS.enc.Utf8));
+
+console.info(CryptoJS.SHA512(message).toString(CryptoJS.enc.Base64));
+</script>
+</body>
+</html>

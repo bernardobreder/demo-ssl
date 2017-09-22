@@ -1,0 +1,1 @@
+java -cp bin -Djavax.net.ssl.trustStore=lig.keystore -Djavax.net.ssl.trustStorePassword=simulator secho.SimpleEchoClient
